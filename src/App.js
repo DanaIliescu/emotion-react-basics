@@ -3,6 +3,8 @@ import { injectGlobal } from 'emotion'
 import styled from 'react-emotion'
 
 import Heading from './components/Heading'
+import Wrapper from './components/Wrapper'
+import Participants from './components/Participants'
 
 // font-weight 300 is light, 400 is normal, 800 is extra bold
 injectGlobal`
@@ -30,7 +32,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      greeting: 'Hello'
+      greeting: 'Hello',
+      participants: ['Mary', 'Joe', 'Anne', 'Mike']
     }
   }
 
@@ -38,6 +41,9 @@ class App extends Component {
     return (
       <PageWrapper>
         <Heading>{this.state.greeting}</Heading>
+        <Wrapper>
+          <Participants participants={this.state.participants} />
+        </Wrapper>
       </PageWrapper>
     )
   }
