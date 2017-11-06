@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <PageWrapper>
         <Heading>{this.state.greeting}</Heading>
-        <Wrapper>
+        <Wrapper width="150px">
           <Participants participants={this.state.participants} />
         </Wrapper>
       </PageWrapper>
