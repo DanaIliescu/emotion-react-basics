@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { injectGlobal } from 'emotion'
 import styled from 'react-emotion'
 
+import Heading from './components/Heading'
+
 // font-weight 300 is light, 400 is normal, 800 is extra bold
 injectGlobal`
   @import url(https://fonts.googleapis.com/css?family=Nunito:300,400,800);
@@ -28,14 +30,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      greeting: 'Hello',
-      participants: ['Mary', 'Joe', 'Anne', 'Mike']
+      greeting: 'Hello'
     }
   }
 
   render() {
     return (
-      <PageWrapper>{this.state.greeting}</PageWrapper>
+      <PageWrapper>
+        <Heading>{this.state.greeting}</Heading>
+      </PageWrapper>
     )
   }
 }
