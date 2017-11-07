@@ -7,7 +7,12 @@ import ParticipantItem from './ParticipantItem'
 // e.g. props.participants = { participans }
 export const Participants = ({ participants }) => (
   participants.map(participant => (
-    <ParticipantItem key={participant}>{participant}</ParticipantItem>
+    <ParticipantItem
+      key={participant}
+      disabled={participant === 'Anne'}
+    >
+      {participant}
+    </ParticipantItem>
   ))
 )
 
